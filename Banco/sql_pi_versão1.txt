@@ -1,0 +1,70 @@
+CREATE sequence usuario_sq 
+START WITH 1
+INCREMENT BY 1
+MINVALUE 1
+NO MAXVALUE;
+
+CREATE sequence cliente_sq 
+START WITH 1
+INCREMENT BY 1
+MINVALUE 1
+NO MAXVALUE;
+
+CREATE sequence locacao_sq
+START WITH 1
+INCREMENT BY 1
+MINVALUE 1
+NO MAXVALUE;
+
+CREATE sequence estadia_sq
+START WITH 1
+INCREMENT BY 1
+MINVALUE 1
+NO MAXVALUE;
+
+CREATE TABLE usuario_tb ( 
+	id_usuario bigint not null,
+	nome varchar(75) not null,
+	email varchar(75) not null,
+	senha varchar(10) not null
+);
+
+insert into usuario_tb (id_usuario,nome,email,senha) values (nextval('usuario_sq'), 'Nome teste', 'teste@teste.com', '112233');
+
+CREATE TABLE  cliente_tb ( 
+	id_cliente bigint not null,
+	nome varchar(75) not null,
+	cpf varchar(14) not null,
+	contato varchar(30) not null
+);
+insert into cliente_tb (id_cliente , nome, cpf, contato) values (nextval('cliente_sq'), 'cliente teste', '111.111.111-11', '12999999999');
+
+
+CREATE TABLE locacao_tb ( 
+	id_locacao bigint not null,
+	descricao varchar(75) not null,
+	descricaotxt varchar(500) not null,
+	valor bigint not null
+);
+
+insert into locacao_tb (id_locacao, descricao, descricaotxt, valor) values (nextval('locacao_sq'), 'casa em campos', '4 quartos sala com lareira piscina aquecida', 1000); 
+
+Create table estadia_tb (
+	id_estadia bigint not null,
+	dataInicio varchar(10) not null, 
+	dataFim varchar(10) not null,
+	horarioEntrada varchar(5),
+	horarioSaida varchar(5),
+	campoIdCliente bigint not null,
+	campoIdLocal	bigint not null,
+	taxaLimpeza bigint,
+	taxaQuebra	bigint ,
+	taxaVariavel bigint 
+);
+
+insert into estadia_tb (id_estadia, dataInicio, dataFim, campoIdCliente, campoIdLocal) values (nextval('estadia_sq'), '28/12/2026', '03/01/2027', '1', '1'); 
+
+select * from usuario_tb;
+select * from cliente_tb;
+select * from locacao_tb;
+select * from estadia_tb;
