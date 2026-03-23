@@ -1,16 +1,13 @@
-# This is a sample Python script.
+from Cliente import Cliente
+from Usuario import Usuario
+from Locacao import Locacao
+from Estadia import Estadia
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+clienteTeste = Cliente("Jader Teste", "111.111.111-11","(12)99999-9999")
+locacaoTeste = Locacao("Quarto em Campos", "Quarto, banheiro amplo, piscina privada aquecida", 1000)
+estadiaTeste = Estadia(locacaoTeste, clienteTeste, "27/12/2026", "03/01/2027")
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(estadiaTeste.Cliente.nome)
+print(estadiaTeste.Locacao.nome)
+print(estadiaTeste.dataInicial)
+print(estadiaTeste.dataFinal)

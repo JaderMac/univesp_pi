@@ -11,12 +11,12 @@ estadiaTeste = Estadia(locacaoTeste, clienteTeste, "27/12/2026", "03/01/2027")
 
 # testes que alteram e retornam atributos
 def test_altera_locacao():
-    estadiaTeste.set_locacao(locacaoTeste2)
+    estadiaTeste.set_Locacao(locacaoTeste2)
     assert "Quarto em Campos 2" == estadiaTeste.get_Locacao().get_nome()
 
 def test_altera_cliente():
     estadiaTeste.set_Cliente(clienteTeste2)
-    assert "Jader Teste 2" == estadiaTeste.get_Cliente().get_Cliente().get_nome()
+    assert "Jader Teste 2" == estadiaTeste.get_Cliente().get_nome()
 
 def test_altera_dataInicial():
     estadiaTeste.set_dataInicial("10/10/2027")
@@ -24,4 +24,4 @@ def test_altera_dataInicial():
 
 def test_altera_dataFinal():
     estadiaTeste.set_dataFinal("15/10/2027")
-    assert "15/10/2027" == estadiaTeste.dataFinal()
+    assert "15/10/2027" == estadiaTeste.get_dataFinal()

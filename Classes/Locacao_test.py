@@ -5,7 +5,7 @@ locacaoTeste = Locacao("Quarto em Campos", "Quarto, banheiro amplo, piscina priv
 # testes que alteram e retornam atributos
 def test_altera_nome():
     locacaoTeste.set_nome("Chalé 1")
-    assert "Teste Projeto" == locacaoTeste.get_nome()
+    assert "Chalé 1" == locacaoTeste.get_nome()
 
 def test_altera_descricao():
     locacaoTeste.set_descricao("12_88888-8888")

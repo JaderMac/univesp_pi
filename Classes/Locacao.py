@@ -4,16 +4,16 @@ class Locacao:
         self.descricao = descricao
         self.valorDiaria = valorDiaria
 
-    def get_nome(self, nome):
+    def get_nome(self):
         return  self.nome
 
-    def get_descricao(self, descricao):
+    def get_descricao(self):
         return  self.descricao
 
-    def get_valorDiaria(self, valorDiaria):
+    def get_valorDiaria(self):
         return self.valorDiaria
 
-    def set_valorDiaria(self, valorDiaria: object) -> None:
+    def set_valorDiaria(self,valorDiaria):
         self.valorDiaria = valorDiaria
 
     def set_nome(self, nome):

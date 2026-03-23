@@ -21,7 +21,7 @@ class Usuario:
 
     def set_senha(self, senha):
         self._senha = senha
-
+#TODO: implementar médotos
 #    def cadastrar_locacao():
 #    def cadastrar_cliente():
 #    def cadastrar_estadia():
