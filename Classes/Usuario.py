@@ -1,8 +1,12 @@
+from Locacao import Locacao
+
 class Usuario:
     def __init__(self, nome, email, senha):
         self._nome = nome
         self._email = email
         self._senha = senha
+        self._listaLocacoes = []
+        self._listaClientes = []
 
     def get_nome(self):
         return self._nome
@@ -21,9 +25,21 @@ class Usuario:
 
     def set_senha(self, senha):
         self._senha = senha
-#TODO: implementar médotos
-#    def cadastrar_locacao():
-#    def cadastrar_cliente():
+
+    def get_listaLocacoes(self):
+        return  self._listaLocacoes
+    
+    def get_listaClientes(self):
+        return  self._listaClientes
+
+    def cadastrar_locacao(self, nomeLocacao, descricaoLocacao, valorLocacao):
+        novaLocacao = Locacao(nomeLocacao,descricaoLocacao,valorLocacao)
+        self._listaLocacoes.append(novaLocacao)
+        
+    def cadastrar_cliente(self, nomeCliente, telefoneCliente, cpfCliente):
+        novoCliente = Locacao(nomeCliente, telefoneCliente, cpfCliente)
+        self._listaClientes.append(novoCliente)
+
 #    def cadastrar_estadia():
 #    def alterar_locacao():
 #    def alterar_cliente():

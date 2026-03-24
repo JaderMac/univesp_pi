@@ -14,3 +14,12 @@ def test_altera_email():
 def test_altera_senha():
     usuarioTeste.set_senha("112233")
     assert "112233" == usuarioTeste.get_senha()
+
+# testes de métodos que interagem com outras classes.
+def test_criando_nova_locacao():
+    usuarioTeste.cadastrar_locacao("Chalé 2", "Chalé com banheira aquecida", 1000)
+    assert 1 == len(usuarioTeste.get_listaLocacoes())
+
+def test_cadastrando_novo_cliente():
+    usuarioTeste.cadastrar_cliente("Marcio", "3905-2233", "111.111.111-11")
+    assert 1 == len(usuarioTeste.get_listaClientes())
