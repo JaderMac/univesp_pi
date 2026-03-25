@@ -11,7 +11,9 @@ usuarioTeste = Usuario("SUPER", "SUPER@USER.COM", "001122")
 usuarioTeste.cadastrar_locacao("Chalé 1", "Chalé com banheira aquecida", 1000)
 usuarioTeste.cadastrar_locacao("Chalé 2", "Chalé com banheira aquecida", 1000)
 
-print(len(usuarioTeste.get_listaLocacoes()))
+# usuarioTeste.cadastrar_estadia(locacaoTeste, clienteTeste,"02/04/2026","10/04/2026")
+
+print(usuarioTeste.cadastrar_estadia(locacaoTeste, clienteTeste,"02/04/2026","10/04/2026"))
 
 # print(estadiaTeste.Locacao.nome)
 # print(estadiaTeste.dataInicial)
