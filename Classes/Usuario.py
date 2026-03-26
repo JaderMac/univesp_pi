@@ -90,18 +90,50 @@ class Usuario:
     # Alterar cliente
     #
     def alterar_nome_cliente(self, clienteAlterado, novoNomeCliente):
-        self.clienteAlterado.set_nome(novoNomeCliente)
-    
+        return clienteAlterado.set_nome(novoNomeCliente)
+
     def alterar_cpf_cliente(self, clienteAlterado, novoCPFCliente):
-        self.clienteAlterado.set_cpf(novoCPFCliente)
+        return clienteAlterado.set_cpf(novoCPFCliente)
 
     def alterar_telefone_cliente(self, clienteAlterado, novoTelefoneCliente):
-        self.clienteAlterado.set_telefone(novoTelefoneCliente)
-    #
-    # Alterar estadia
-    #
-#    def alterar_cliente():
-#    def alterar_estadia():
-#    def deletar_locacao():
-#    def deletar_cliente():
-#    def deletar_estadia():
+        return clienteAlterado.set_telefone(novoTelefoneCliente)
+    # #
+    # # Alterar locacao
+    # #
+    def alterar_nome_locacao(self, locacaoAlterada, novoNome):
+        return locacaoAlterada.set_nome(novoNome)
+    
+    def alterar_descricao_locacao(self, locacaoAlterada, novaDescricao):
+        return locacaoAlterada.set_descricao(novaDescricao)
+    
+    def alterar_valorDiaria_locacao(self, locacaoAlterada, novoValorDiaria):
+        return locacaoAlterada.set_valorDiaria(novoValorDiaria)
+    # #
+    # # Alterar estadia
+    # #
+    def alterar_cliente_estadia(self, estadiaAlterada, novoCliente):
+        return estadiaAlterada.set_Cliente(novoCliente)
+    
+    def alterar_locacao_estadia(self, estadiaAlterada, novaLocacao):
+        return estadiaAlterada.set_Locacao(novaLocacao)
+
+    def alterar_dataInicial_estadia(self, estadiaAlterada, novaDataInicial):
+        return estadiaAlterada.set_dataInicial(novaDataInicial) 
+
+    def alterar_dataFinal_estadia(self, estadiaAlterada, novaDataFinal):
+        return estadiaAlterada.set_dataFinal(novaDataFinal) 
+
+    def deletar_cliente(self, clienteExcluido):
+        if clienteExcluido is not None:
+            del clienteExcluido
+            return 1
+
+    def deletar_locacao(self, locacaoExcluida):
+        if locacaoExcluida is not None:
+            del locacaoExcluida
+            return 1
+ 
+    def deletar_estadia(self, estadiaExcluida):
+        if estadiaExcluida is not None:
+            del estadiaExcluida
+            return 1

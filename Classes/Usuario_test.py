@@ -70,4 +70,76 @@ def test_pesquisando_estadia_por_dataInicial():
     estadiaPesquisada = usuarioTeste.pesquisar_estadia_por_dataInicial(estadiaCriada)
     assert estadiaCriada == estadiaPesquisada
 
-    # estadiaCriada = usuarioTeste.cadastrar_estadia(usuarioTeste.cadastrar_estadia(Locacao("Quarto em Campos","Quarto",1000),Cliente("Jader","111.111.111-11","(12)99999"),"02/04/2026","10/04/2026"))
+# testes de alteração
+def test_alterando_nome_cliente():
+    novoCliente = usuarioTeste.cadastrar_cliente("Jader Teste", "129888888", "111.111.111-11")
+    usuarioTeste.alterar_nome_cliente(novoCliente, "Lucas")
+    assert "Lucas" == novoCliente.get_nome()
+
+def test_alterando_cpf_cliente():
+    novoCliente = usuarioTeste.cadastrar_cliente("Jader Teste", "129888888", "111.111.111-11")
+    usuarioTeste.alterar_cpf_cliente(novoCliente, "012")
+    assert "012" == novoCliente.get_cpf()
+
+def test_alterando_telefone_cliente():
+    novoCliente = usuarioTeste.cadastrar_cliente("Jader Teste", "129888888", "111.111.111-11")
+    usuarioTeste.alterar_telefone_cliente(novoCliente, "123")
+    assert "123" == novoCliente.get_telefone()
+
+def test_alterando_nome_locacao():
+    novaLocacao = usuarioTeste.cadastrar_locacao("Chalé 1", "Chalé com banheira aquecida", 1000)
+    usuarioTeste.alterar_nome_locacao(novaLocacao,"Quarto 1")
+    assert "Quarto 1" == novaLocacao.get_nome()
+
+def test_alterando_descricao_locacao():
+    novaLocacao = usuarioTeste.cadastrar_locacao("Chalé 1", "Chalé com banheira aquecida", 1000)
+    usuarioTeste.alterar_descricao_locacao(novaLocacao,"quarto com varanda")
+    assert "quarto com varanda" == novaLocacao.get_descricao()
+
+def test_alterando_valorDiaria_locacao():
+    novaLocacao = usuarioTeste.cadastrar_locacao("Chalé 1", "Chalé com banheira aquecida", 1000)
+    usuarioTeste.alterar_valorDiaria_locacao(novaLocacao,800)
+    assert 800 == novaLocacao.get_valorDiaria()
+
+def test_alterando_cliente_estadia():
+    novoCliente = usuarioTeste.cadastrar_cliente("Jader Teste", "129888888", "111.111.111-11")
+    novoCliente2 = usuarioTeste.cadastrar_cliente("Amanda Teste", "129888888", "111.111.111-11")
+    novaEstadia = usuarioTeste.cadastrar_estadia("Chalé 1", "Quarto com varanda", "25/01/27", "29/01/21")
+    usuarioTeste.alterar_cliente_estadia(novaEstadia, novoCliente2)
+    assert novoCliente2.get_nome() == novaEstadia.get_Cliente().get_nome()
+
+def test_alterando_locacao_estadia():
+    novoCliente = usuarioTeste.cadastrar_cliente("Jader Teste", "129888888", "111.111.111-11")
+    novaLocacao0 = usuarioTeste.cadastrar_locacao("Chalé 1", "Chalé com banheira aquecida", 1000)
+    novaLocacao1 = usuarioTeste.cadastrar_locacao("Chalé 2", "Chalé com banheira aquecida", 1000)
+    novaEstadia = usuarioTeste.cadastrar_estadia(novaLocacao0 , novoCliente,"02/04/2026","10/04/2026")
+    usuarioTeste.alterar_locacao_estadia(novaEstadia, novaLocacao1)
+    assert "Chalé 2" == novaEstadia.get_Locacao().get_nome()
+
+def test_alterando_dataInicial_estadia():
+    novoCliente = usuarioTeste.cadastrar_cliente("Jader Teste", "129888888", "111.111.111-11")
+    novaLocacao = usuarioTeste.cadastrar_locacao("Chalé 1", "Chalé com banheira aquecida", 1000)
+    novaEstadia = usuarioTeste.cadastrar_estadia(novaLocacao , novoCliente,"02/04/2026","10/04/2026")
+    usuarioTeste.alterar_dataInicial_estadia(novaEstadia, "22/12/2027")
+    assert  "22/12/2027" == novaEstadia.get_dataInicial()
+
+def test_alterando_dataFinal_estadia():
+    novoCliente = usuarioTeste.cadastrar_cliente("Jader Teste", "129888888", "111.111.111-11")
+    novaLocacao = usuarioTeste.cadastrar_locacao("Chalé 1", "Chalé com banheira aquecida", 1000)
+    novaEstadia = usuarioTeste.cadastrar_estadia(novaLocacao , novoCliente,"02/04/2026","10/04/2026")
+    usuarioTeste.alterar_dataFinal_estadia(novaEstadia, "31/12/2027")
+    assert  "31/12/2027" == novaEstadia.get_dataFinal()
+
+def test_excluir_cliente():
+    novoCliente = usuarioTeste.cadastrar_cliente("Jader Teste", "129888888", "111.111.111-11")
+    assert 1 == usuarioTeste.deletar_cliente(novoCliente)
+
+def test_excluir_locacao():
+    novaLocacao = usuarioTeste.cadastrar_locacao("Chalé 1", "Chalé com banheira aquecida", 1000)
+    assert 1 == usuarioTeste.deletar_locacao(novaLocacao)
+
+def test_esxcluir_estadia():
+    novoCliente = usuarioTeste.cadastrar_cliente("Jader Teste", "129888888", "111.111.111-11")
+    novaLocacao = usuarioTeste.cadastrar_locacao("Chalé 1", "Chalé com banheira aquecida", 1000)
+    novaEstadia = usuarioTeste.cadastrar_estadia(novaLocacao , novoCliente,"02/04/2026","10/04/2026")
+    assert 1 == usuarioTeste.deletar_estadia(novaEstadia)
