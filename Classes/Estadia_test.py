@@ -9,7 +9,6 @@ locacaoTeste2 = Locacao("Quarto em Campos 2", "2 - Quarto, banheiro amplo, pisci
 
 estadiaTeste = Estadia(locacaoTeste, clienteTeste, "27/12/2026", "03/01/2027")
 
-# testes que alteram e retornam atributos
 def test_altera_locacao():
     estadiaTeste.set_Locacao(locacaoTeste2)
     assert "Quarto em Campos 2" == estadiaTeste.get_Locacao().get_nome()

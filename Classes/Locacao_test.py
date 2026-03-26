@@ -2,7 +2,6 @@ from Locacao import Locacao
 
 locacaoTeste = Locacao("Quarto em Campos", "Quarto, banheiro amplo, piscina privada aquecida", 1000)
 
-# testes que alteram e retornam atributos
 def test_altera_nome():
     locacaoTeste.set_nome("Chalé 1")
     assert "Chalé 1" == locacaoTeste.get_nome()

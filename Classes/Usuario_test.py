@@ -138,7 +138,7 @@ def test_excluir_locacao():
     novaLocacao = usuarioTeste.cadastrar_locacao("Chalé 1", "Chalé com banheira aquecida", 1000)
     assert 1 == usuarioTeste.deletar_locacao(novaLocacao)
 
-def test_esxcluir_estadia():
+def test_excluir_estadia():
     novoCliente = usuarioTeste.cadastrar_cliente("Jader Teste", "129888888", "111.111.111-11")
     novaLocacao = usuarioTeste.cadastrar_locacao("Chalé 1", "Chalé com banheira aquecida", 1000)
     novaEstadia = usuarioTeste.cadastrar_estadia(novaLocacao , novoCliente,"02/04/2026","10/04/2026")
