@@ -70,10 +70,12 @@ class Usuario:
             if locacaoPesquisada.get_nome() == locacao.get_nome():
                 return  locacaoPesquisada
                     
-    def pesquisar_locacao_por_valor(self, locacaoPesquisada):
+    def pesquisar_locacao_por_valor(self, valorLocacaoPesquisada):
+        listaLocacoesPesquisadas = []
         for locacao in self.get_listaLocacoes():
-            if locacaoPesquisada.get_valor() == locacao.get_valor():
-                return  locacaoPesquisada
+            if valorLocacaoPesquisada == locacao.get_valorDiaria():
+                listaLocacoesPesquisadas.append(locacao)
+        return listaLocacoesPesquisadas
 
     def pesquisar_estadia_por_locacao(self, estadiaPesquisada):
         for estadia in self.get_listaEstadias():

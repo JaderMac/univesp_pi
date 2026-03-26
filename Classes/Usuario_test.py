@@ -19,7 +19,7 @@ def test_altera_senha():
     assert "112233" == usuarioTeste.get_senha()
 
 # testes de métodos que interagem com outras classes Criação.
-def test_criando_nova_locacao():
+def test_cadastrando_nova_locacao():
     usuarioTeste.cadastrar_locacao("Chalé 2", "Chalé com banheira aquecida", 1000)
     assert 1 == len(usuarioTeste.get_listaLocacoes())
 
@@ -37,8 +37,25 @@ def test_pesquisando_cliente_por_nome():
     clientePesquisado = usuarioTeste.pesquisar_cliente_por_nome(clienteCriado)
     assert  "Marcio" == clientePesquisado.get_nome()
 
-
 def test_pesquisando_cliente_por_cpf():
     clienteCriado = usuarioTeste.cadastrar_cliente("Marcio", "111.111.111-11", "3905-2233")
     clientePesquisado = usuarioTeste.pesquisar_cliente_por_cpf(clienteCriado)
     assert  "111.111.111-11" == clientePesquisado.get_cpf()
+
+def test_pesquisando_locacao_por_nome():
+    locacaoCriada = usuarioTeste.cadastrar_locacao("Quarto em Campos", "Quarto com banheiro", 1000)
+    locacaoPesquisada = usuarioTeste.pesquisar_locacao_por_nome(locacaoCriada)
+    assert "Quarto em Campos" == locacaoPesquisada.get_nome()
+
+def test_pesquisando_locacao_por_valor_uma_locacao():
+    locacaoCriada = usuarioTeste.cadastrar_locacao("Quarto em Campos", "Quarto com banheiro", 100)
+    listaLocacoesPesquisada = usuarioTeste.pesquisar_locacao_por_valor(100)
+    assert 1 == len(listaLocacoesPesquisada)
+
+def test_pesquisando_locacao_por_valor_varias_locacoes():
+    locacaoCriada1 = usuarioTeste.cadastrar_locacao("Quarto em Campos", "Quarto com banheiro", 100)
+    locacaoCriada2 = usuarioTeste.cadastrar_locacao("Quarto em Campos 2 ", "Quarto com banheiro", 150)
+    locacaoCriada3 = usuarioTeste.cadastrar_locacao("Quarto em Campos 3 ", "Quarto com banheiro", 100)
+    locacaoCriada4 = usuarioTeste.cadastrar_locacao("Quarto em Campos 4 ", "Quarto com banheiro", 150)
+    listaLocacoesPesquisada = usuarioTeste.pesquisar_locacao_por_valor(150)
+    assert 2 == len(listaLocacoesPesquisada)
