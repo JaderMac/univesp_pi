@@ -52,9 +52,7 @@ class Usuario:
         novaEstadia = Estadia(ClienteEstadia, LocacaoEstadia, dataInicialEstadia, dataFinalEstadia)
         self._listaEstadias.append(novaEstadia)
         return novaEstadia
-    #
-    # pesquisar
-    #
+
     def pesquisar_cliente_por_nome(self, clientePesquisado):
         for cliente in self.get_listaClientes():
             if clientePesquisado.get_nome().lower() == cliente.get_nome().lower():
@@ -86,9 +84,7 @@ class Usuario:
         for estadia in self.get_listaEstadias():
             if estadiaPesquisada.get_dataInicial() == estadia.get_dataInicial():
                 return  estadiaPesquisada
-    #
-    # Alterar cliente
-    #
+
     def alterar_nome_cliente(self, clienteAlterado, novoNomeCliente):
         return clienteAlterado.set_nome(novoNomeCliente)
 
@@ -97,9 +93,7 @@ class Usuario:
 
     def alterar_telefone_cliente(self, clienteAlterado, novoTelefoneCliente):
         return clienteAlterado.set_telefone(novoTelefoneCliente)
-    # #
-    # # Alterar locacao
-    # #
+
     def alterar_nome_locacao(self, locacaoAlterada, novoNome):
         return locacaoAlterada.set_nome(novoNome)
     
@@ -108,9 +102,7 @@ class Usuario:
     
     def alterar_valorDiaria_locacao(self, locacaoAlterada, novoValorDiaria):
         return locacaoAlterada.set_valorDiaria(novoValorDiaria)
-    # #
-    # # Alterar estadia
-    # #
+
     def alterar_cliente_estadia(self, estadiaAlterada, novoCliente):
         return estadiaAlterada.set_Cliente(novoCliente)
     

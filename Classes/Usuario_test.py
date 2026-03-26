@@ -5,7 +5,6 @@ from Estadia import Estadia
 
 usuarioTeste = Usuario("UsuarioTest", "usuario@mail.com", "001122")
 
-# testes que alteram e retornam atributos
 def test_altera_nome():
     usuarioTeste.set_nome("Teste Projeto")
     assert "Teste Projeto" == usuarioTeste.get_nome()
@@ -18,7 +17,6 @@ def test_altera_senha():
     usuarioTeste.set_senha("112233")
     assert "112233" == usuarioTeste.get_senha()
 
-# testes de métodos que interagem com outras classes Criação.
 def test_cadastrando_nova_locacao():
     usuarioTeste.cadastrar_locacao("Chalé 2", "Chalé com banheira aquecida", 1000)
     assert 1 == len(usuarioTeste.get_listaLocacoes())
@@ -31,7 +29,6 @@ def test_cadastrando_nova_estadia():
     usuarioTeste.cadastrar_estadia(Locacao("Quarto em Campos", "Quarto, banheiro amplo, piscina privada aquecida", 1000), Cliente("Jader Teste", "111.111.111-11","(12)99999-9999"), "02/04/2026","10/04/2026")
     assert 1 == len(usuarioTeste.get_listaEstadias())
 
-# testes de métodos de pesquisa
 def test_pesquisando_cliente_por_nome():
     clienteCriado = usuarioTeste.cadastrar_cliente("Marcio", "111.111.111-11", "3905-2233")
     clientePesquisado = usuarioTeste.pesquisar_cliente_por_nome(clienteCriado)
@@ -70,7 +67,6 @@ def test_pesquisando_estadia_por_dataInicial():
     estadiaPesquisada = usuarioTeste.pesquisar_estadia_por_dataInicial(estadiaCriada)
     assert estadiaCriada == estadiaPesquisada
 
-# testes de alteração
 def test_alterando_nome_cliente():
     novoCliente = usuarioTeste.cadastrar_cliente("Jader Teste", "129888888", "111.111.111-11")
     usuarioTeste.alterar_nome_cliente(novoCliente, "Lucas")
