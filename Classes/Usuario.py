@@ -79,7 +79,7 @@ class Usuario:
 
     def pesquisar_estadia_por_locacao(self, estadiaPesquisada):
         for estadia in self.get_listaEstadias():
-            if estadiaPesquisada.get_locacao() == estadia.get_locacao():
+            if estadiaPesquisada.get_Locacao() == estadia.get_Locacao():
                 return  estadiaPesquisada
     
     def pesquisar_estadia_por_dataInicial(self, estadiaPesquisada):
@@ -97,7 +97,9 @@ class Usuario:
 
     def alterar_telefone_cliente(self, clienteAlterado, novoTelefoneCliente):
         self.clienteAlterado.set_telefone(novoTelefoneCliente)
-
+    #
+    # Alterar estadia
+    #
 #    def alterar_cliente():
 #    def alterar_estadia():
 #    def deletar_locacao():

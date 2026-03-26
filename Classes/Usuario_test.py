@@ -59,3 +59,15 @@ def test_pesquisando_locacao_por_valor_varias_locacoes():
     locacaoCriada4 = usuarioTeste.cadastrar_locacao("Quarto em Campos 4 ", "Quarto com banheiro", 150)
     listaLocacoesPesquisada = usuarioTeste.pesquisar_locacao_por_valor(150)
     assert 2 == len(listaLocacoesPesquisada)
+
+def test_pesquisando_estadia_por_locacao():
+    estadiaCriada = usuarioTeste.cadastrar_estadia(Locacao("Quarto em Campos","Quarto",1000),Cliente("Jader","111.111.111-11","(12)99999"),"02/04/2026","10/04/2026")
+    estadiaPesquisada = usuarioTeste.pesquisar_estadia_por_locacao(estadiaCriada)
+    assert estadiaCriada == estadiaPesquisada
+
+def test_pesquisando_estadia_por_dataInicial(): 
+    estadiaCriada = usuarioTeste.cadastrar_estadia(Locacao("Quarto em Campos","Quarto",1000),Cliente("Jader","111.111.111-11","(12)99999"),"02/04/2026","10/04/2026")
+    estadiaPesquisada = usuarioTeste.pesquisar_estadia_por_dataInicial(estadiaCriada)
+    assert estadiaCriada == estadiaPesquisada
+
+    # estadiaCriada = usuarioTeste.cadastrar_estadia(usuarioTeste.cadastrar_estadia(Locacao("Quarto em Campos","Quarto",1000),Cliente("Jader","111.111.111-11","(12)99999"),"02/04/2026","10/04/2026"))
