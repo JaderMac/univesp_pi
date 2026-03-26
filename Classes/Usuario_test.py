@@ -18,7 +18,7 @@ def test_altera_senha():
     usuarioTeste.set_senha("112233")
     assert "112233" == usuarioTeste.get_senha()
 
-# testes de métodos que interagem com outras classes.
+# testes de métodos que interagem com outras classes Criação.
 def test_criando_nova_locacao():
     usuarioTeste.cadastrar_locacao("Chalé 2", "Chalé com banheira aquecida", 1000)
     assert 1 == len(usuarioTeste.get_listaLocacoes())
@@ -30,3 +30,15 @@ def test_cadastrando_novo_cliente():
 def test_cadastrando_nova_estadia():
     usuarioTeste.cadastrar_estadia(Locacao("Quarto em Campos", "Quarto, banheiro amplo, piscina privada aquecida", 1000), Cliente("Jader Teste", "111.111.111-11","(12)99999-9999"), "02/04/2026","10/04/2026")
     assert 1 == len(usuarioTeste.get_listaEstadias())
+
+# testes de métodos de pesquisa
+def test_pesquisando_cliente_por_nome():
+    clienteCriado = usuarioTeste.cadastrar_cliente("Marcio", "111.111.111-11", "3905-2233")
+    clientePesquisado = usuarioTeste.pesquisar_cliente_por_nome(clienteCriado)
+    assert  "Marcio" == clientePesquisado.get_nome()
+
+
+def test_pesquisando_cliente_por_cpf():
+    clienteCriado = usuarioTeste.cadastrar_cliente("Marcio", "111.111.111-11", "3905-2233")
+    clientePesquisado = usuarioTeste.pesquisar_cliente_por_cpf(clienteCriado)
+    assert  "111.111.111-11" == clientePesquisado.get_cpf()

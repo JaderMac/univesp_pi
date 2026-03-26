@@ -41,44 +41,47 @@ class Usuario:
     def cadastrar_locacao(self, nomeLocacao, descricaoLocacao, valorLocacao):
         novaLocacao = Locacao(nomeLocacao,descricaoLocacao,valorLocacao)
         self._listaLocacoes.append(novaLocacao)
+        return novaLocacao
         
     def cadastrar_cliente(self, nomeCliente, telefoneCliente, cpfCliente):
-        novoCliente = Locacao(nomeCliente, telefoneCliente, cpfCliente)
+        novoCliente = Cliente(nomeCliente, telefoneCliente, cpfCliente)
         self._listaClientes.append(novoCliente)
+        return novoCliente
 
     def cadastrar_estadia(self, ClienteEstadia, LocacaoEstadia, dataInicialEstadia, dataFinalEstadia):
         novaEstadia = Estadia(ClienteEstadia, LocacaoEstadia, dataInicialEstadia, dataFinalEstadia)
         self._listaEstadias.append(novaEstadia)
+        return novaEstadia
     #
     # pesquisar
     #
     def pesquisar_cliente_por_nome(self, clientePesquisado):
-        for cliente in self.get_listaClientes:
-            if clientePesquisado.get_nome() == cliente.get_nome():
+        for cliente in self.get_listaClientes():
+            if clientePesquisado.get_nome().lower() == cliente.get_nome().lower():
                 return  clientePesquisado
    
     def pesquisar_cliente_por_cpf(self, clientePesquisado):
-        for cliente in self.get_listaClientes:
+        for cliente in self.get_listaClientes():
             if clientePesquisado.get_cpf() == cliente.get_cpf():
                 return  clientePesquisado
             
     def pesquisar_locacao_por_nome(self, locacaoPesquisada):
-        for locacao in self.get_listaLocacoes:
+        for locacao in self.get_listaLocacoes():
             if locacaoPesquisada.get_nome() == locacao.get_nome():
                 return  locacaoPesquisada
                     
     def pesquisar_locacao_por_valor(self, locacaoPesquisada):
-        for locacao in self.get_listaLocacoes:
+        for locacao in self.get_listaLocacoes():
             if locacaoPesquisada.get_valor() == locacao.get_valor():
                 return  locacaoPesquisada
 
     def pesquisar_estadia_por_locacao(self, estadiaPesquisada):
-        for estadia in self.get_listaEstadias:
+        for estadia in self.get_listaEstadias():
             if estadiaPesquisada.get_locacao() == estadia.get_locacao():
                 return  estadiaPesquisada
     
     def pesquisar_estadia_por_dataInicial(self, estadiaPesquisada):
-        for estadia in self.get_listaEstadias:
+        for estadia in self.get_listaEstadias():
             if estadiaPesquisada.get_dataInicial() == estadia.get_dataInicial():
                 return  estadiaPesquisada
     #
