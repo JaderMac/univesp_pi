@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minhas estadias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Adicionar nova estadia</h1>
+    <form>
+    <div class="mb-3">
+        <label for="clienteNovaEstadia" class="form-label">Cliente Nova Estadia:</label>
+        <input class="form-control" id="clienteNovaEstadia" aria-describedby="clienteNovaEstadia" 
+        placeholder="Neste campo será um checkbox com os clientes do Usuario">
+    </div>
+    <div class="mb-3">
+        <label for="locacaoNovaEstadia" class="form-label">Locação Nova Estadia:</label>
+        <input class="form-control" id="locacaoNovaEstadia" aria-describedby="locacaoNovaEstadia" 
+        placeholder="Neste campo será um checkbox com as locaçoes do Usuario">
+    </div>
+
+    <div class="mb-3">
+        <label for="descriçãoNovaEstadia" class="form-label">Descrição nova Estadia:</label>
+        <input class="form-control" id="descriçãoNovaEstadia" aria-describedby="descriçãoNovaEstadia"
+        placeholder="campo que tem a opção com aquele calendariozinho">
+    </div>
+
+    <div class="mb-3">
+        <label for="dataInicialNovaEstadia" class="form-label">Data Inicial da nova estadia:</label>
+        <input class="form-control" id="dataInicialNovaEstadia" aria-describedby="dataInicialNovaEstadia"
+        placeholder="campo que tem a opção com aquele calendariozinho">
+    </div>
+      <button type="submit" class="btn btn-primary">Cadastrar Nova Estadia</button>
+    </form>
+
+
+
+    <h1>Lista de Estadias:</h1>
+    <h2>
+    </h2>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome do Cliente</th>
+            <th scope="col">Nome da Locação</th>
+            <th scope="col">Data Inicio</th>
+            <th scope="col">Data Final</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%for estadia in estadiasd%}  
+          <tr>
+            <th scope="row">{{estadia.id}}</th>
+            <td>{{estadia.cliente_id}}</td> 
+            <td>{{estadia.locação_id}}</td>
+            <td>{{estadia.data_inicial}}</td>
+            <td>{{estadia.data_final}}</td>
+            <td><button id="editar" type="button" class="btn btn-primary">Editar Estadia</button>
+            <button id="deletar" type="button" class="btn btn-danger">Deletar Estadia</button></td>          
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
