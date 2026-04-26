@@ -33,4 +33,5 @@ Rotas finalizadas:
 
     Atualizar
         http://127.0.0.1:5000/usuario/clientes/1/edit
+        http://127.0.0.1:5000/usuario/estadias/1/edit
         

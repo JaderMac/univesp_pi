@@ -7,10 +7,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
-    <p>campo para editar : NOME</p>
-    <p>campo para editar : DESCRIÇÃO</p>
-    <p>campo para editar : VALOR</p>
-    <p>botão salvar</p>
+     <strong>Atualizando locação:</strong>
+    <p>
+    <strong>Nome atual:</strong> {{locacao.nome}}<br>
+    <strong>Descrição atual:</strong> {{locacao.descricao}}<br>
+    <strong>Valor diária atual:</strong>{{locacao.valordiaria}}
+    </p>
+    
+    <div class="mb-3">
+        <label for="novoNomeLocacao" class="form-label">Atualizar nome:</label>
+        <input class="form-control" id="novoNomeLocacao" aria-describedby="novoNomeLocacao"
+        placeholder="{{locacao.nome}}">
+    </div>
+        <div class="mb-3">
+        <label for="novaDescricaoLocacao" class="form-label">Atualizar descrição:</label>
+        <input class="form-control" id="novaDescricaoLocacao" aria-describedby="novaDescricaoLocacao"
+        placeholder="{{locacao.descricao}}">
+    </div>
+      </div>
+        <div class="mb-3">
+        <label for="novoValorLocacao" class="form-label">Atualizar valor diária:</label>
+        <input class="form-control" id="novoValorLocacao" aria-describedby="novoValorLocacao"
+        placeholder="{{locacao.valordiaria}}">
+    </div>
+    <button id="Atualizar" type="button" class="btn btn-danger">Atualizar</button>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>

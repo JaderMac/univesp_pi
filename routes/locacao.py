@@ -22,7 +22,8 @@ def inserir_locacao():
 
 @locacao_route.route('/<int:locacao_id>/edit')
 def form_atualizar_locacao(locacao_id):
-    return render_template('form_atualizar_locacao.html')
+    locacao = locacoes[locacao_id]
+    return render_template('form_atualizar_locacao.html', locacao=locacao)
 
 @locacao_route.route('/<int:locacao_id>', methods=[('PUT')])
 def atualizar_locacao(locacao_id):
