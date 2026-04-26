@@ -36,4 +36,9 @@ Rotas finalizadas:
         http://127.0.0.1:5000/usuario/clientes/1/edit
         http://127.0.0.1:5000/usuario/locacoes/1/edit
         http://127.0.0.1:5000/usuario/estadias/1/edit
-        
+    
+    Detalhes
+        http://127.0.0.1:5000/usuario/1
+        http://127.0.0.1:5000/usuario/clientes/1
+        http://127.0.0.1:5000/usuario/locacoes/1
+        http://127.0.0.1:5000/usuario/estadias/1
