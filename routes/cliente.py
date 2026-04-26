@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template 
-from fakeBd import clientes
+from banco.fakeBd import clientes
 
 cliente_route = Blueprint('clientes', __name__)
 
@@ -22,7 +22,8 @@ def inserir_cliente():
 
 @cliente_route.route('/<int:cliente_id>/edit')
 def form_atualizar_cliente(cliente_id):
-    return render_template('form_atualizar_cliente.html')
+    cliente=clientes[cliente_id]
+    return render_template('form_atualizar_cliente.html', cliente=cliente)
 
 @cliente_route.route('/<int:cliente_id>', methods=[('PUT')])
 def atualizar_cliente(cliente_id):

@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template 
-from fakeBd import locacoes
+from banco.fakeBd import locacoes
 
 locacao_route = Blueprint('locacao', __name__)
 

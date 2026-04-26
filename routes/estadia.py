@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template 
-from fakeBd import estadias
-from fakeBd import clientes
-from fakeBd import locacoes
+from banco.fakeBd import estadias
+from banco.fakeBd import clientes
+from banco.fakeBd import locacoes
 
 estadia_route = Blueprint('estadia', __name__)
 

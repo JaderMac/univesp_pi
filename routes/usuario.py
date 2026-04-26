@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template 
-from fakeBd import Usuarios
+from banco.fakeBd import Usuarios
 
 usuario_route = Blueprint('usuario', __name__)
 usuario_id = 5
