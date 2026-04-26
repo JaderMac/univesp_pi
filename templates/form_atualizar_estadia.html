@@ -7,11 +7,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
-    <p>campo para editar : CLIENTE</p>
-    <p>campo para editar : LOCAL</p>
-    <p>campo para editar : DATA INICIAL</p>
-    <p>campo para editar : DATA FINAL</p>
-    <p>botão salvar</p>
+    <strong>Atualizando estadia:</strong>
+    <p>
+    <strong>Cliente atual:</strong> {{cliente.nome}}<br>
+    <strong>Locação atual:</strong> {{locacao.nome}}<br>
+    <strong>Data inicial atual:</strong>{{estadia.data_inicial}}<br>
+    <strong>Data final atual:</strong>{{estadia.data_final}}
+    </p>
+    <div class="mb-3">
+        <label for="novoCliente" class="form-label">Atualizar nome:</label>
+        <input class="form-control" id="novoCliente" aria-describedby="novoCliente"
+        placeholder="{{cliente.nome}}">
+    </div>
+        <div class="mb-3">
+        <label for="novaLocacao" class="form-label">Atualizar Locaçao:</label>
+        <input class="form-control" id="novaLocacao" aria-describedby="novaLocacao"
+        placeholder="{{locacao.nome}}">
+    </div>
+      
+    <div class="mb-3">
+        <label for="novaDataInicial" class="form-label">Atualizar data inicial:</label>
+        <input class="form-control" id="novaDataInicial" aria-describedby="novaDataInicial"
+        placeholder="{{estadia.data_inicial}}">
+    </div>
+        <div class="mb-3">
+        <label for="novaDataFinal" class="form-label">Atualizar data final:</label>
+        <input class="form-control" id="novaDataFinal" aria-describedby="novaDataFinal"
+        placeholder="{{estadia.data_final}}">
+    </div>
+    <button id="Atualizar" type="button" class="btn btn-danger">Atualizar</button>
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>

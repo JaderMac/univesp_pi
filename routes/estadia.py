@@ -26,7 +26,10 @@ def inserir_estadia():
 
 @estadia_route.route('/<int:estadia_id>/edit')
 def form_atualizar_estadia(estadia_id):
-    return render_template('form_atualizar_estadia.html')
+    estadia=estadias[estadia_id]
+    cliente=clientes[1]
+    locacao=locacoes[1]
+    return render_template('form_atualizar_estadia.html', estadia=estadia, cliente=cliente, locacao=locacao)
 
 @estadia_route.route('/<int:estadia_id>', methods=[('PUT')])
 def atualizar_estadia(estadia_id):
