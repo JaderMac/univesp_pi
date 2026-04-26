@@ -7,10 +7,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
-    <p>campo para editar : NOME</p>
-    <p>campo para editar : EMAIL</p>
-    <p>campo para editar : SENHA</p>
-    <p>botão salvar</p>
+    <strong>Atualizando usuário</strong>
+    <p>
+    <strong>Nome atual:</strong> {{usuario.nome}}<br>
+    <strong>Email atual:</strong> {{usuario.email}}<br>
+    <strong>Senha atual:</strong>{{usuario.senha}}
+    </p>
+    <div class="mb-3">
+        <label for="novoNomeUsuario" class="form-label">Atualizar nome:</label>
+        <input class="form-control" id="novoNomeUsuario" aria-describedby="novoNomeUsuario"
+        placeholder="{{usuario.nome}}">
+    </div>
+        <div class="mb-3">
+        <label for="novaEmailLocacao" class="form-label">Atualizar email:</label>
+        <input class="form-control" id="novaEmailLocacao" aria-describedby="novaEmailLocacao"
+        placeholder="{{usuario.email}}">
+    </div>
+      </div>
+        <div class="mb-3">
+        <label for="novoSenhaUsuario" class="form-label">Atualizar senha:</label>
+        <input class="form-control" id="novoSenhaUsuario" aria-describedby="novoSenhaUsuario"
+        placeholder="{{usuario.senha}}">
+    </div>
+    <button id="Atualizar" type="button" class="btn btn-danger">Atualizar</button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
