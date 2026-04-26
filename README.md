@@ -4,16 +4,29 @@ Sistema de gestão de locações
 
 --
 
-Puxar o projeto para a sua máquina.
+1 - Puxar o projeto para a sua máquina.
 
-1 - Criar um ambiente virtual na sua máquina.
+2 - Criar um ambiente virtual na sua máquina.
 
     python -m venv venv
 
-2 - Instalar as dependencias do projeto.
+3 - Instalar as dependencias do projeto.
 
     pip install -r requirements.txt
 
-3 - Rodar o arquivo main
+4 - Rodar o arquivo main
 
     python main.py
+
+---
+
+Rotas finalizadas:
+
+    Index
+        http://127.0.0.1:5000/
+
+    Listar
+        http://127.0.0.1:5000/usuario/
+        http://127.0.0.1:5000/usuario/clientes/
+        http://127.0.0.1:5000/usuario/locacoes/
+        http://127.0.0.1:5000/usuario/estadias/ 
