@@ -1,5 +1,6 @@
 from flask import Flask, make_response, jsonify, request, url_for, render_template
 from banco.fakeBd import Usuarios
+# from banco.banco_fake import Usuarios
 from routes.home import home_route
 from routes.usuario import usuario_route
 from routes.cliente import cliente_route

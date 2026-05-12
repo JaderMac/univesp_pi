@@ -1,14 +1,14 @@
 from flask import Blueprint, render_template 
-from banco.fakeBd import Usuarios
+# from banco.fakeBd import Usuarios
+from banco.banco_fake import Usuarios
 
 usuario_route = Blueprint('usuario', __name__)
-usuario_id = 5
 
 @usuario_route.route('/')
 def listar_usuarios():
     # Retorna todos usuarios do sistema // apenas admin
-    usuariosd=Usuarios
-    return render_template('listar_usuarios.html', usuariosd=Usuarios)
+    usuario=Usuarios[0]
+    return render_template('listar_usuarios.html', usuario=usuario)
 
 @usuario_route.route('/<int:usuario_id>')
 def detalhar_usuario(usuario_id):

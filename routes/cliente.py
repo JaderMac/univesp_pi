@@ -1,14 +1,15 @@
 from flask import Blueprint, render_template 
-from banco.fakeBd import clientes
+# from banco.fakeBd import clientes
+from banco.banco_fake import Usuarios
 
 cliente_route = Blueprint('clientes', __name__)
 
-cliente_id = 1 
+usuario = Usuarios[0]
+clientes = usuario['listaClientes']
 
 @cliente_route.route('/')
 def listar_clientes():
-    clientesd=clientes
-    return render_template('listar_clientes.html', clientesd=clientes)
+    return render_template('listar_clientes.html', clientes=clientes)
 
 @cliente_route.route('/<int:cliente_id>')
 def detalhar_cliente(cliente_id):
