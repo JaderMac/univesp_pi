@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">Locação</th>
+        <th scope="col">Data Entrada</th>
+        <th scope="col">Data Saída</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody id="lista-locacoes">
+        {% for estadia in estadias %}
+            {% include 'item_estadia.html' %}
+        {% endfor %}
+    </tbody>
+  </table>

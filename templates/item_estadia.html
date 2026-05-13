@@ -1,0 +1,27 @@
+<tr id="estadia-{{estadia.id}}">
+    <th scope="row">{{ estadia.id }}</th>
+    <td>{{ estadia.id_cliente }}</td>
+    <td>{{ estadia.id_locacao }}</td>
+    <td>{{ estadia.dataInicial }}</td>
+    <td>{{ estadia.dataFinal }}</td>
+    <td>
+        <button class="btn btn-secondary" 
+            c-get="{{ url_for('estadias.detalhar_estadia', estadia_id=estadia.id) }}"
+            c-target="#exibir-estadia"
+            data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Ver
+        </button>
+
+        <button class="btn btn-primary" 
+            c-get="{{ url_for('estadias.form_editar_estadia', estadia_id=estadia.id) }}"
+            c-target="#form-estadia">
+                Editar
+        </button>
+
+        <button class="btn btn-danger" 
+            c-delete="{{ url_for('estadias.deletar_estadia', estadia_id=estadia.id) }}"
+            c-remove-closest="tr">
+                Deletar
+        </button>
+    </td>
+</tr>

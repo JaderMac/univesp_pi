@@ -4,7 +4,7 @@ from banco.banco_fake import Usuarios
 locacao_route = Blueprint('locacoes', __name__)
 
 locacoes = Usuarios[0]['listaLocacao']
-
+ 
 @locacao_route.route('/')
 def listar_locacoes():
     return render_template('listar_locacoes.html', locacoes=locacoes)

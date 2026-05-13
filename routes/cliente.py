@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request
 from banco.banco_fake import Usuarios
-
+ 
 cliente_route = Blueprint('clientes', __name__)
 
 clientes = Usuarios[0]['listaClientes']

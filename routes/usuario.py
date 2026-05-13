@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template 
-# from banco.fakeBd import Usuarios
 from banco.banco_fake import Usuarios
-
+ 
 usuario_route = Blueprint('usuario', __name__)
 
 @usuario_route.route('/')
