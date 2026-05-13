@@ -4,7 +4,7 @@ Usuarios = [
         'nome':'Jader Machado - User',
         'senha': 112233,
         'email': 'jader@univesp.pi',
-        'listaClientes': [
+        'listaClientes': [      
             {'id':'1', 'nome':'Cliente 1', 'celular': '11-98888-8888', 'email':'cliente1@pi.com'},   
             {'id':'2', 'nome':'Cliente 2', 'celular': '11-98888-8888', 'email':'cliente1@pi.com'},   
             {'id':'3', 'nome':'Cliente 3', 'celular': '11-98888-8888', 'email':'cliente1@pi.com'},   
