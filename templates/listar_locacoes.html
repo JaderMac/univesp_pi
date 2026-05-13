@@ -1,0 +1,16 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Valor Diária</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody id="lista-locacoes">
+        {% for locacao in locacoes %}
+            {% include 'item_locacao.html' %}
+        {% endfor %}
+    </tbody>
+  </table>

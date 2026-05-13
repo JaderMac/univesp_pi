@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template
-from banco.banco_fake import Usuarios
 
 home_route = Blueprint('home', __name__)
 
