@@ -1,0 +1,37 @@
+<form class="c-form"  
+        {% if estadia %}
+            action="{{ url_for('estadias.atualizar_estadia', estadia_id=estadia.id) }}" 
+        {% else %}
+            action="{{ url_for('estadias.inserir_estadia') }}" 
+        {% endif %}
+
+        method="{% if estadia %}PUT{% else %}POST{% endif %}"
+
+        {% if estadia %}
+            c-swap="#estadia-{{estadia.id}}"
+        {% else %}
+            c-append="#lista-estadias"
+        {% endif %}
+
+        c-reload-container="true">
+   
+    <div class="mb-3">
+      <label class="form-label">Id Cliente</label>
+      <input type="text" class="form-control" name="id_cliente" {% if estadia %}value="{{estadia.id_cliente}}"{% endif %}>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Id Locação</label>
+      <input type="text" class="form-control" name="id_locacao" {% if estadia %}value="{{estadia.id_locacao}}"{% endif %}>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Data Inicial</label>
+      <input type="text" class="form-control" name="dataInicial" {% if estadia %}value="{{estadia.dataInicial}}"{% endif %}>
+    </div>
+      <div class="mb-3">
+      <label class="form-label">Data Final</label>
+      <input type="text" class="form-control" name="dataFinal" {% if estadia %}value="{{estadia.dataFinal}}"{% endif %}>
+    </div>
+    <button type="submit" class="btn btn-primary">
+        {% if estadia %}Salvar{% else %}Criar{% endif %}
+    </button>
+</form>

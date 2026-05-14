@@ -3,7 +3,7 @@ from banco.banco_fake import Usuarios
 
 locacao_route = Blueprint('locacoes', __name__)
 
-locacoes = Usuarios[0]['listaLocacao']
+locacoes = Usuarios[0]['listaLocacao'] 
  
 @locacao_route.route('/')
 def listar_locacoes():
@@ -30,6 +30,7 @@ def form_locacao():
 @locacao_route.route('/<int:locacao_id>')
 def detalhar_locacao(locacao_id):  
     locacao = list(filter(lambda l: l['id'] == locacao_id, locacoes))[0]
+    # estadia = list(filter(lambda e: e['id'] == estadia_id, estadias))[0]
     return render_template('detalhe_locacao.html', locacao=locacao)
 
 @locacao_route.route('/<int:locacao_id>/edit')

@@ -1,8 +1,10 @@
-<form class="c-form" 
+<form class="c-form"  
         {% if locacao %}
             action="{{ url_for('locacoes.atualizar_locacao', locacao_id=locacao.id) }}" 
+           
         {% else %}
             action="{{ url_for('locacoes.inserir_locacao') }}" 
+            
         {% endif %}
 
         method="{% if locacao %}PUT{% else %}POST{% endif %}"
@@ -10,24 +12,24 @@
         {% if cliente %}
             c-swap="#locacao-{{locacao.id}}"
         {% else %}
-            c-append="#lista-locacao"
+            c-append="#lista-locacoes"
         {% endif %}
 
         c-reload-container="true">
    
     <div class="mb-3">
       <label class="form-label">Nome</label>
-      <input type="text" class="form-control" name="nome" {% if locacao%}value="{{locacao.nome}}"{% endif %}>
+      <input type="text" class="form-control" name="nome" {% if locacao %}value="{{locacao.nome}}"{% endif %}>
     </div>
 
     <div class="mb-3">
         <label id="label-target" class="form-label">Descrição</label>
-        <input type="text" class="form-control" name="descricao"{% if locacao%}value="{{locacao.descricao}}"{% endif %}>
+        <input type="text" class="form-control" name="descrição"{% if locacao %}value="{{ locacao.descrição }}"{% endif %}>
     </div>
   
     <div class="mb-3">
         <label id="label-target" class="form-label">Valor Diária</label>
-        <input type="text" class="form-control" name="valorDiaria"{% if locacao%}value="{{locacao.valorDiaria}}"{% endif %}>
+        <input type="text" class="form-control" name="valorDiaria"{% if locacao %}value="{{ locacao.valorDiaria }}"{% endif %}>
     </div>
 
     <button type="submit" class="btn btn-primary">

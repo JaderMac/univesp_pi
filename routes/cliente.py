@@ -3,7 +3,7 @@ from banco.banco_fake import Usuarios
  
 cliente_route = Blueprint('clientes', __name__)
 
-clientes = Usuarios[0]['listaClientes']
+clientes = Usuarios[0]['listaClientes'] 
 
 @cliente_route.route('/')
 def listar_clientes():

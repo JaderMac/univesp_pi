@@ -22,26 +22,26 @@ Sistema de gestão de locações
 
 Rotas finalizadas:
 
-    Index
-        http://127.0.0.1:5000/
+    Landing
+        http://127.0.0.1:5000/landing
 
     Login
         http://127.0.0.1:5000/login
 
+    Home
+        http://127.0.0.1:5000/
+
     Listar
-        http://127.0.0.1:5000/usuario/
         http://127.0.0.1:5000/usuario/clientes/
         http://127.0.0.1:5000/usuario/locacoes/
         http://127.0.0.1:5000/usuario/estadias/ 
-
+        
+    Detalhes
+        http://127.0.0.1:5000/usuario/clientes/1
+        http://127.0.0.1:5000/usuario/locacoes/1
+        http://127.0.0.1:5000/usuario/estadias/1
     Atualizar
-        http://127.0.0.1:5000/usuario/1/edit
         http://127.0.0.1:5000/usuario/clientes/1/edit
         http://127.0.0.1:5000/usuario/locacoes/1/edit
         http://127.0.0.1:5000/usuario/estadias/1/edit
     
-    Detalhes
-        http://127.0.0.1:5000/usuario/1
-        http://127.0.0.1:5000/usuario/clientes/1
-        http://127.0.0.1:5000/usuario/locacoes/1
-        http://127.0.0.1:5000/usuario/estadias/1

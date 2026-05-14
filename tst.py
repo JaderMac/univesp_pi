@@ -1,5 +1,6 @@
 from banco.banco_fake import Usuarios
-usuario = Usuarios[0]
-clientes = usuario['listaClientes']
+clientes = Usuarios[0]['listaClientes']
+locacoes = Usuarios[0]['listaLocacao'] 
+estadias = Usuarios[0]['listaEstadias'] 
 # clientes = usuario.get("listaClientes")
-print(clientes)
+print(locacoes)

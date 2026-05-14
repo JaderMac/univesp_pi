@@ -3,7 +3,7 @@ from banco.banco_fake import Usuarios
 
 estadia_route = Blueprint('estadias', __name__)
 
-estadias = Usuarios[0]['listaEstadias']
+estadias = Usuarios[0]['listaEstadias'] 
 
 @estadia_route.route('/')
 def listar_estadias():
@@ -35,7 +35,7 @@ def detalhar_estadia(estadia_id):
     return render_template('detalhe_estadia.html', estadia=estadia)
 
 @estadia_route.route('/<int:estadia_id>/edit')
-def form_editar_estadia(estadia_id):
+def form_editar_estadia(estadia_id): 
     """ formulario para editar  """
     estadia = None
     for e in estadias:
