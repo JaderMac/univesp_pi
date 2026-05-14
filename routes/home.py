@@ -14,3 +14,15 @@ def login_page_home():
 @home_route.route('/landing')
 def landing_page_home():
        return render_template('landing.html')
+
+@home_route.route('/meus_clientes')
+def clientes_page():
+       return render_template('meus_clientes.html')
+
+@home_route.route('/minhas_locacoes')
+def locacoes_page():
+       return render_template('minhas_locacoes.html')
+
+@home_route.route('/minhas_estadias')
+def estadias_page():
+       return render_template('minhas_estadias.html')
