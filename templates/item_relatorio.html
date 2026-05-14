@@ -1,0 +1,27 @@
+<tr id="relatorio-{{relatorio.id}}">
+    <th scope="row">{{ relatorio.id }}</th>
+    <td>{{ relatorio.id_locacao }}</td>
+    <td>{{ relatorio.dataInicial }}</td>
+    <td>{{ relatorio.dataFinal }}</td>
+    <td>{{ relatorio.valorFinal }}</td>
+    <td>
+        <button class="btn btn-secondary" 
+            c-get="{{ url_for('relatorios.detalhar_relatorio', relatorio_id=relatorio.id) }}"
+            c-target="#exibir-relatorio"
+            data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Ver
+        </button>
+
+        <button class="btn btn-primary" 
+            c-get="{{ url_for('relatorios.form_editar_relatorio', relatorio_id=relatorio.id) }}"
+            c-target="#form-relatorio">
+                Editar
+        </button>
+
+        <button class="btn btn-danger" 
+            c-delete="{{ url_for('relatorios.deletar_relatorio', relatorio_id=relatorio.id) }}"
+            c-remove-closest="tr">
+                Deletar
+        </button>
+    </td>
+</tr>

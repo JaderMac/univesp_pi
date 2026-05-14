@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Locação</th>
+        <th scope="col">Data Inicial</th>
+        <th scope="col">Data Final</th>
+        <th scope="col">Valor final</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody id="lista-relatórios">
+        {% for relatorio in relatorios %}
+            {% include 'item_relatorio.html' %}
+        {% endfor %}
+    </tbody>
+  </table>

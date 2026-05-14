@@ -1,0 +1,37 @@
+<form class="c-form"  
+        {% if relatorio %}
+            action="{{ url_for('relatorios.atualizar_relatorio', relatorio_id=relatorio.id) }}" 
+        {% else %}
+            action="{{ url_for('relatorios.inserir_relatorio') }}" 
+        {% endif %}
+
+        method="{% if relatorio %}PUT{% else %}POST{% endif %}"
+
+        {% if relatorio %}
+            c-swap="#relatorio-{{relatorio.id}}"
+        {% else %}
+            c-append="#lista-relatorios"
+        {% endif %}
+
+        c-reload-container="true">
+   
+    <div class="mb-3">
+      <label class="form-label">Id Locação</label>
+      <input type="text" class="form-control" name="id_locacao" {% if relatorio %}value="{{relatorio.id_locacao}}"{% endif %}>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Data Inicial</label>
+      <input type="text" class="form-control" name="dataInicial" {% if relatorio %}value="{{relatorio.dataInicial}}"{% endif %}>
+    </div>
+      <div class="mb-3">
+      <label class="form-label">Data Final</label>
+      <input type="text" class="form-control" name="dataFinal" {% if relatorio %}value="{{relatorio.dataFinal}}"{% endif %}>
+    </div>
+        <div class="mb-3">
+      <label class="form-label">Valor Final</label>
+      <input type="text" class="form-control" name="valorFinal" {% if relatorio %}value="{{relatorio.valorFinal}}"{% endif %}>
+    </div>
+    <button type="submit" class="btn btn-primary">
+        {% if relatorio %}Salvar{% else %}Criar{% endif %}
+    </button>
+</form>

@@ -26,3 +26,7 @@ def locacoes_page():
 @home_route.route('/minhas_estadias')
 def estadias_page():
        return render_template('minhas_estadias.html')
+
+@home_route.route('/relatorios')
+def relatorios_page():
+       return render_template('relatorios.html')
