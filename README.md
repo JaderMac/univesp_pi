@@ -21,21 +21,16 @@ Sistema de gestão de locações
 ---
 
 Rotas finalizadas:
-
     Landing
         http://127.0.0.1:5000/landing
-
     Login
         http://127.0.0.1:5000/login
-
     Home
         http://127.0.0.1:5000/
-
     Listar
         http://127.0.0.1:5000/usuario/clientes/
         http://127.0.0.1:5000/usuario/locacoes/
         http://127.0.0.1:5000/usuario/estadias/ 
-        
     Detalhes
         http://127.0.0.1:5000/usuario/clientes/1
         http://127.0.0.1:5000/usuario/locacoes/1
