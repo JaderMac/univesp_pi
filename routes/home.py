@@ -30,3 +30,11 @@ def estadias_page():
 @home_route.route('/relatorios')
 def relatorios_page():
        return render_template('relatorios.html')
+
+@home_route.route('/head')
+def header_page():
+       return render_template('header.html')
+
+@home_route.route('/foot')
+def footer_page():
+       return render_template('footer.html')
