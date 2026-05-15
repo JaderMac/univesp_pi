@@ -11,13 +11,13 @@
             data-bs-toggle="modal" data-bs-target="#exampleModal3">
                 Ver
         </button>
-
-        <button class="btn btn-primary" 
+        {% if not esconder %}
+        <button class="btn btn-primary" id="botaoEditar"
             c-get="{{ url_for('estadias.form_editar_estadia', estadia_id=estadia.id) }}"
             c-target="#form-estadia">
                 Editar
         </button>
-
+        {% endif %}
         <button class="btn btn-danger" 
             c-delete="{{ url_for('estadias.deletar_estadia', estadia_id=estadia.id) }}"
             c-remove-closest="tr">
