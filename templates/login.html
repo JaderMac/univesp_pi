@@ -3,26 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login Page</title>
+    <title>Projeto Integrador - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css')  }}">
+    <link rel="icon" href="{{ url_for('static', filename='resources/icon-Univesp-02.svg')  }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
-  <body>
-    <h2>Projeto Integrador - Univesp</h2>
+  <body> 
+    <header>
+    <div class="logo">Projeto Integrador - UNIVESP</div>
+    </header>
+    <section id="login" class="login">
     <form>
-        <div class="mb-3">
+        <div class="input-group">
             <label for="email" class="form-label">Email:</label>
             <input type="email" class="form-control" id="email" name="email"
-            placeholder="Email">
+            >
         </div>
-        <div class="mb-3">
+        <div class="input-group">
             <label for="exampleInputPassword1" class="form-label">Senha:</label>
             <input type="password" class="form-control" name="senha"
-            placeholder="Senha">
+            >
         </div>
-    </form>
-    <button type="submit" class="btn btn-primary">Entrar</button>
-    <a href="https:">Esqueci minha senha</a>
+        <div class="options">
+            <label><input type="checkbox"> Lembrar de mim</label>
+            <a href="#">Esqueceu a senha?</a>
+        </div>
+        <button type="submit" class="btn-login">Entrar</button>
+      </form>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/cru.js')  }}"></script>
+        <footer>
+        <p>&copy; Projeto Integrador 2026 - UNIVESP São José dos Campos - Pq. Técnológico - Sistema de Gestão.</p>
+    </footer>
   </body>
 </html>

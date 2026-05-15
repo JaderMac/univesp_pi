@@ -1,0 +1,318 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1ABC9C;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1ABC9C;
+}
+/* login Section */
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Fundo cinza claro */
+}
+.login {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 400px; /* Largura máxima do cartão */
+}
+
+/* Estilos dos textos de cabeçalho */
+/* Reset básico para garantir que funcione igual em todos os navegadores */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Centraliza o formulário no meio da tela inteira */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Fundo cinza claro */
+}
+
+/* O cartão branco do formulário */
+.login-form {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 400px; /* Largura máxima do cartão */
+}
+
+/* Estilos dos textos de cabeçalho */
+.login h2 {
+    margin: 0 0 0.5rem 0;
+    color: #2C3E50;
+    text-align: center;
+}
+
+.login p {
+    margin: 0 0 2rem 0;
+    color: #666666;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Grupos de rótulo (label) e campo de texto (input) */
+.input-group {
+    width: 100%;             /* Ocupa toda a largura disponível */
+    padding: 8px 0;          /* Espaço interno em cima e embaixo, sem espaço nas laterais */
+    font-size: 16px;         /* Tamanho da fonte */
+    background-color: transparent; /* Remove o fundo branco padrão */
+    border: none;            /* Remove todas as bordas */
+    border-bottom: 2px solid #cccccc; /* Adiciona apenas a linha de baixo (cinza) */
+    outline: none;           /* Remove o contorno padrão de foco do navegador (MUITO IMPORTANTE) */
+    transition: border-color 0.3s ease; /* Animação suave na troca de cor */
+}
+
+/* Linha com o "Lembrar de mim" e "Esqueceu a senha" */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.options label {
+    color: #555555;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.options a {
+    color: #1ABC9C;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+/* Botão principal de Entrar */
+.btn-login {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #2C3E50; /* Azul escuro do tema */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+/* Efeitos de passar o mouse e clicar no botão */
+.btn-login:hover {
+    background-color: #1a252f;
+    color: #1ABC9C;
+}
+
+.btn-login:active {
+    transform: scale(0.98); /* Dá um pequeno "pulo" ao clicar */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), 
+                url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    background-color: #1ABC9C;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #16A085;
+}
+
+/* Sobre/Recursos */
+.sobre {
+    padding: 4rem 5%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.sobre h2 {
+    margin-bottom: 3rem;
+    color: #2C3E50;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.feature-card h3 {
+    color: #1ABC9C;
+    margin-bottom: 1rem;
+}
+
+/* Contato */
+.contato {
+    padding: 4rem 5%;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.contato-info, .contato-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contato h2 {
+    margin-bottom: 1.5rem;
+    color: #2C3E50;
+}
+
+.contato-info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.contato-form input, .contato-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
