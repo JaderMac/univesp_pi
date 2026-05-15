@@ -37,7 +37,12 @@ Usuarios = [
             {'id':7, 'id_cliente':7, 'id_locacao':3, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':8, 'id_cliente':8, 'id_locacao':2, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':9, 'id_cliente':9, 'id_locacao':1, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'}
-        ]
+        ],
+        'relatorios': [
+            {"id":1, "id_locacao":1, "dataInicial":"27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 120},
+            {"id":2, "id_locacao":5, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 550},
+            {"id":3, "id_locacao":9, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 2700}
+            ],
     },{
         'id': 2,
         'nome':'Usuario - User',
@@ -55,7 +60,12 @@ Usuarios = [
         'listaEstadias':[
             {'id':1, 'id_cliente':1, 'id_locacao':1, 'dataInicial':'12/07/2026', 'dataFinal':'20/07/2026'},
             {'id':2, 'id_cliente':2, 'id_locacao':2, 'dataInicial':'12/07/2026', 'dataFinal':'20/07/2026'}
-        ]
+        ],
+                'relatorios': [
+            {"id":1, "id_locacao":1, "dataInicial":"27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 120},
+            {"id":2, "id_locacao":5, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 550},
+            {"id":3, "id_locacao":9, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 2700}
+            ],
     },{
         'id': 3,
         'nome':'Bianca',
@@ -94,7 +104,11 @@ Usuarios = [
             {'id':7, 'id_cliente':7, 'id_locacao':3, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':8, 'id_cliente':8, 'id_locacao':2, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':9, 'id_cliente':9, 'id_locacao':1, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'}
-        ]
+        ],        'relatorios': [
+            {"id":1, "id_locacao":1, "dataInicial":"27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 120},
+            {"id":2, "id_locacao":5, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 550},
+            {"id":3, "id_locacao":9, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 2700}
+            ],
     },{
         'id': 4,
         'nome':'Jessica',
@@ -133,7 +147,11 @@ Usuarios = [
             {'id':7, 'id_cliente':7, 'id_locacao':3, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':8, 'id_cliente':8, 'id_locacao':2, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':9, 'id_cliente':9, 'id_locacao':1, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'}
-        ]
+        ],         'relatorios': [
+            {"id":1, "id_locacao":1, "dataInicial":"27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 120},
+            {"id":2, "id_locacao":5, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 550},
+            {"id":3, "id_locacao":9, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 2700}
+            ],
     },{
         'id': 5,
         'nome':'Kimberly',
@@ -172,7 +190,11 @@ Usuarios = [
             {'id':7, 'id_cliente':7, 'id_locacao':3, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':8, 'id_cliente':8, 'id_locacao':2, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':9, 'id_cliente':9, 'id_locacao':1, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'}
-        ]
+        ],         'relatorios': [
+            {"id":1, "id_locacao":1, "dataInicial":"27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 120},
+            {"id":2, "id_locacao":5, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 550},
+            {"id":3, "id_locacao":9, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 2700}
+            ],
     },{
         'id': 6,
         'nome':'Edson',
@@ -211,7 +233,11 @@ Usuarios = [
             {'id':7, 'id_cliente':7, 'id_locacao':3, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':8, 'id_cliente':8, 'id_locacao':2, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':9, 'id_cliente':9, 'id_locacao':1, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'}
-        ]
+        ],         'relatorios': [
+            {"id":1, "id_locacao":1, "dataInicial":"27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 120},
+            {"id":2, "id_locacao":5, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 550},
+            {"id":3, "id_locacao":9, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 2700}
+            ],
     },{
         'id': 7,
         'nome':'Brener',
@@ -250,7 +276,11 @@ Usuarios = [
             {'id':7, 'id_cliente':7, 'id_locacao':3, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':8, 'id_cliente':8, 'id_locacao':2, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':9, 'id_cliente':9, 'id_locacao':1, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'}
-        ]
+        ],         'relatorios': [
+            {"id":1, "id_locacao":1, "dataInicial":"27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 120},
+            {"id":2, "id_locacao":5, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 550},
+            {"id":3, "id_locacao":9, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 2700}
+            ],
     },{
         'id': 8,
         'nome':'Luiz',
@@ -289,10 +319,14 @@ Usuarios = [
             {'id':7, 'id_cliente':7, 'id_locacao':3, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':8, 'id_cliente':8, 'id_locacao':2, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':9, 'id_cliente':9, 'id_locacao':1, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'}
-        ]
+        ],         'relatorios': [
+            {"id":1, "id_locacao":1, "dataInicial":"27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 120},
+            {"id":2, "id_locacao":5, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 550},
+            {"id":3, "id_locacao":9, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 2700}
+            ],
     },{
         'id': 7,
-        'nome':'',
+        'nome':'edson',
         'senha': 112233,
         'email': 'edson@univesp.pi',
         'listaClientes': [      
@@ -328,6 +362,10 @@ Usuarios = [
             {'id':7, 'id_cliente':7, 'id_locacao':3, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':8, 'id_cliente':8, 'id_locacao':2, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'},
             {'id':9, 'id_cliente':9, 'id_locacao':1, 'dataInicial':'12/06/2026', 'dataFinal':'20/06/2026'}
-        ]
+        ],         'relatorios': [
+            {"id":1, "id_locacao":1, "dataInicial":"27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 120},
+            {"id":2, "id_locacao":5, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 550},
+            {"id":3, "id_locacao":9, "dataInicial": "27/07/2028", "dataFinal":"28/07/2028", "valorFinal": 2700}
+            ],
     },
 ]
