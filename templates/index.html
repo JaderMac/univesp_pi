@@ -20,44 +20,9 @@
     <hr>
       <p><a class="link-opacity-10-hover" href="/relatorios">Relatórios</a></p>
     <hr>
-      <!-- <h3>Lista de clientes:</h3>
-      <div c-container="{{ url_for('clientes.listar_clientes') }}"></div>
-    <hr>
-      <h3>Lista de locais:</h3>
-      <div c-container="{{ url_for('locacoes.listar_locacoes') }}"></div>
-    <hr> -->
       <h3>Lista de Reservas:</h3>
       <div c-container="{{ url_for('estadias.listar_estadias') }}"></div>
-    <!-- <hr>
-      <h3>Relatórios:</h3>
-      <div c-container="{{ url_for('relatorios.listar_relatorios') }}"></div>
-    <hr> -->
-      <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Detalhes</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body" id="exibir-cliente"></div>
-          <div class="modal-footer">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Detalhes</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body" id="exibir-locacao"></div>
-          <div class="modal-footer">
-          </div>
-        </div>
-      </div>
-    </div>
+    <hr>
     <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -66,19 +31,6 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body" id="exibir-estadia"></div>
-          <div class="modal-footer">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Detalhes</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body" id="exibir-relatorio"></div>
           <div class="modal-footer">
           </div>
         </div>
