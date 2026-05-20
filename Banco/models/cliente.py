@@ -1,5 +1,6 @@
 from peewee import Model, CharField, DateTimeField, ForeignKeyField
-from database.database import db
+from banco.database import db
+from banco.models.usuario import Usuario
 import datetime
 
 class Cliente(Model):

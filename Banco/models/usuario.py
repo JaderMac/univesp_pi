@@ -1,5 +1,5 @@
 from peewee import Model, CharField, DateTimeField
-from database.database import db
+from banco.database import db
 import datetime
 
 class Usuario(Model):

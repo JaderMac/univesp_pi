@@ -1,5 +1,7 @@
 from peewee import Model, CharField, DecimalField, DateTimeField, ForeignKeyField
-from database.database import db
+from banco.database import db
+from banco.models.cliente import Cliente
+from banco.models.locacao import Locacao
 import datetime
 
 class Estadia(Model):
