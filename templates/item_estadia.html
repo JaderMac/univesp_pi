@@ -19,9 +19,14 @@
         </button>
         {% endif %}
         <button class="btn btn-danger" 
-            c-delete="{{ url_for('estadias.deletar_estadia', estadia_id=estadia.id) }}"
-            c-remove-closest="tr">
+            c-get="{{ url_for('estadias.detalhar_estadia', estadia_id=estadia.id) }}"
+            c-target="#deleteModal"
+            data-bs-toggle="modal" data-bs-target="#exampleModal4"
+            >
                 Deletar
         </button>
     </td>
 </tr>
+
+<!-- c-delete="{{ url_for('estadias.deletar_estadia', estadia_id=estadia.id) }}" -->
+<!-- c-remove-closest="tr" -->
