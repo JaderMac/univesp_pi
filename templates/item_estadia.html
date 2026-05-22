@@ -11,22 +11,20 @@
             data-bs-toggle="modal" data-bs-target="#exampleModal3">
                 Ver
         </button>
-        {% if not esconder %}
         <button class="btn btn-primary" id="botaoEditar"
             c-get="{{ url_for('estadias.form_editar_estadia', estadia_id=estadia.id) }}"
             c-target="#form-estadia">
                 Editar
         </button>
-        {% endif %}
         <button class="btn btn-danger" 
             c-get="{{ url_for('estadias.detalhar_estadia', estadia_id=estadia.id) }}"
             c-target="#deleteModal"
             data-bs-toggle="modal" data-bs-target="#exampleModal4"
-            >
-                Deletar
-        </button>
+            c-delete="{{ url_for('estadias.deletar_estadia', estadia_id=estadia.id) }}"
+            c-remove-closest="tr"
+            >Deletar
+        </button> 
     </td>
 </tr>
 
-<!-- c-delete="{{ url_for('estadias.deletar_estadia', estadia_id=estadia.id) }}" -->
-<!-- c-remove-closest="tr" -->
+
